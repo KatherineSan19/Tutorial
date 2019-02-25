@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class Titulo extends React.Component{
+export default class Titulo extends Component{
   render(){
     return(
       <div>
-        <h1>Places</h1>
-        <p>Descubre lugares de manera simple</p>
-        <p>¡Lugares únicos y maravillosos!</p>
+        <h1>Your faithful friend</h1>
+        <p></p>
+        <p>"Hasta que no hayas amado a un animal, parte de tu alma estará dormida"</p>
       </div>
+
     );
   }
 }
