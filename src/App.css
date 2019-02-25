@@ -17,6 +17,7 @@
 }
 .Header-Benefit-t{
 font-size: 90%;
+padding: 10px
 }
 
 .Header-Benefit{
@@ -65,7 +66,7 @@ font-size: 90%;
 
 .Header-main{
   margin-bottom: 2em;
-  margin-left: -300px;
+
 }
 
 .container{

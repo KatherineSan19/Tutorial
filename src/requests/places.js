@@ -8,12 +8,12 @@ export default{
     {
       imageUrl:'/images/test-animales.jpg',
       title:'Testado en animales.',
-      description:'Estas pruebas se realizaban para determinar si los productos son seguros.',
+      description:'Estas pruebas se realizaban para probar los productos',
     },
     {
       imageUrl:'/images/2830528ac28f4d42629f8dc2093397ab.png',
       title:'Productos Para Mascotas',
-      description:'Hecho de nylon súper resistente con pieza completa en el pecho.',
+      description:'De nylon súper resistentes con pieza completa en el pecho.',
     },
   ]
 }
