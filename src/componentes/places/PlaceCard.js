@@ -7,7 +7,7 @@ export default class Beneficios extends React.Component {
     return(
       <div>
       <Col xs={24} md={8} key={this.props.index}>
-      <Card className="Header-Benefit-publi" title={this.props.place.title}  >
+      <Card className="Header-Benefit-publi" title={this.props.place.title}>
 
         <div className="Header-Benefit-image">
         <img src={process.env.PUBLIC_URL + this.props.place.imageUrl} width="200" height="250"/>
