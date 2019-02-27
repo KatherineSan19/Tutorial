@@ -1,12 +1,20 @@
 export default{
 info:[
     {
+      title:'Foto',
+      dataIndex:'foto',
+    },
+    {
       title: 'Nombre',
   dataIndex: 'nombre',
     },
     {
-      title:'Foto',
-      dataIndex:'foto',
+      title:'Edad',
+      dataIndex:'edad',
+    },
+    {
+      title:'Sexo',
+      dataIndex:'sexo',
     },
   ]
 }

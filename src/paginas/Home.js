@@ -7,6 +7,8 @@ import Beneficios from '../componentes/Beneficios';
 import PlaceCard from '../componentes/places/PlaceCard';
 import data from '../requests/places';
 
+import TransitionGRoup from 'react-transition-group/TransitionGroup';
+
 export default class Home extends React.Component{
 
   constructor(props){
@@ -37,7 +39,7 @@ hidePLaces(place){
     return(
       <section>
         <div className= "Header-background">
-          <div style={{"width":"80%", "margin":"0 auto"}}>
+          <div style={{"margin":"0 auto"}}>
             <div className="Header-main">
 
 
@@ -57,10 +59,11 @@ hidePLaces(place){
         </div>
         <div style={{ background: 'rgb(255, 204, 204)', padding: '50 px', color: 'black' }}>
           <h3 style={{'fontSize':'24px'}}>Sitios Populares</h3>
-          <Row>
+          <TransitionGRoup>
+           <Row>
            {this.places()}
            </Row>
-
+          </TransitionGRoup>
         </div>
     </section>
     );
