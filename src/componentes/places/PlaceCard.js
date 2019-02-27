@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Card, Col, Button  } from 'antd';
 
-import CSSTransition from 'react-transition-group/CssTransition';
+import CSSTransition from 'react-transition-group/CSSTransition';
 
 export default class PlaceCard extends React.Component {
 
