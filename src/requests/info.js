@@ -3,6 +3,9 @@ info:[
     {
       title:'Foto',
       dataIndex:'foto',
+      render: (tags,registro) =>{
+        return <span>hola</span>
+      }
     },
     {
       title: 'Nombre',

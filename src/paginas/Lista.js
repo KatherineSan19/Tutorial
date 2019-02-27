@@ -1,7 +1,7 @@
 import React from 'react';
 
 import datos from '../requests/adopcion';
-import columnas from '../requests/info';
+//import columnas from '../requests/info';
 
 import {Table} from 'antd';
 
@@ -22,7 +22,27 @@ render(){
   <div style={{padding: '100 px'}}>
     <div>
     <h2>Adopción</h2>
-      <Table columns={columnas.info} dataSource={datos.adopcion} size="small" />
+      <Table columns={[
+          {
+            title:'Foto',
+            dataIndex:'foto',
+            render: (tag,registro) =>(
+              <img src={registro.foto}/>
+            )
+          },
+          {
+            title: 'Nombre',
+        dataIndex: 'nombre',
+          },
+          {
+            title:'Edad',
+            dataIndex:'edad',
+          },
+          {
+            title:'Sexo',
+            dataIndex:'sexo',
+          },
+        ]} dataSource={datos.adopcion} size="small" />
       </div>
   </div>
     );
