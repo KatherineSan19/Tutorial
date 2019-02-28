@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, Row, } from 'antd';
+import { Button, Row, Menu, Icon } from 'antd';
 
 import Titulo from '../componentes/Titulo';
 import Beneficios from '../componentes/Beneficios';
@@ -9,8 +9,10 @@ import data from '../requests/places';
 
 import TransitionGRoup from 'react-transition-group/TransitionGroup';
 
-export default class Home extends React.Component{
+const SubMenu = Menu.SubMenu;
+const MenuItemGroup = Menu.ItemGroup;
 
+export default class Home extends React.Component{
   constructor(props){
     super(props);
 
@@ -31,23 +33,43 @@ export default class Home extends React.Component{
 
 hidePLaces(place){
   this.setState({
-    places: this.state.places.filter(el => el != place)
+    places: this.state.places.filter(el => el !== place)
   })
+}
+
+handleClick = (e) => {
+  console.log('click ', e);
 }
 
   render(){
     return(
       <section>
         <div className= "Header-background">
-          <div style={{"margin":"0 auto"}}>
-            <div className="Header-main">
 
+          <div style={{"margin":"0 auto"}}>
+          <div className= "Botones" style={{background: 'rgb(206, 172, 189)' }} align="right">
+
+          <Menu
+                  title="Menu"
+                  onClick={this.handleClick}
+                  style={{ width: 250, background: 'rgb(206, 172, 189)' }}
+                  mode="horizontal"
+                >
+                      <SubMenu title={<span className="submenu-title-wrapper"><Icon type="bars" />Menu</span>}>
+                      <Menu.Item key="1"><Icon type="user" />Ingresar a cuenta</Menu.Item>
+                      <Menu.Item key="2"><Icon type="user-add" />Crear cuenta gratuita</Menu.Item>
+                      <Menu.Item key="3"><Icon type="search" />Buscar</Menu.Item>
+                      </SubMenu>
+                  </Menu>
+
+
+
+          </div>
+            <div className="Header-main">
 
             <img className="Header-illustration"  src={process.env.PUBLIC_URL + '/images/adoptados.png'}/>
             <Titulo></Titulo>
-            <div>
-            <Button style={{background: 'rgb(255, 102, 153)' }}>Crear cuenta gratuita</Button>
-            </div>
+
             <div>
               <h3 style={{'fontSize':'18px'}}>Servicios</h3>
             </div>
@@ -57,7 +79,7 @@ hidePLaces(place){
           </div>
         </div>
         </div>
-        <div style={{ background: 'rgb(255, 204, 204)', padding: '50 px', color: 'black' }}>
+        <div style={{ background: 'rgb(206, 172, 189)', padding: '50 px', color: 'black' }}>
           <h3 style={{'fontSize':'24px'}}>Sitios Populares</h3>
           <TransitionGRoup>
            <Row>

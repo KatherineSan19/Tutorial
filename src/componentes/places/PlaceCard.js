@@ -11,7 +11,6 @@ constructor(props){
   this.state={
     show:true
   }
-
 }
 
   render() {
@@ -30,8 +29,8 @@ constructor(props){
           <div className="Header-Benefit-t" >
         {this.props.place.description}
           </div>
-        <div >
-          <Button type="secondary" size="small">Ver más</Button>
+        <div>
+          <Button type="secondary" size="small" >Ver más</Button>
           <Button type="secondary" size="small" onClick={()=> this.props.onRemove(this.props.place)}>Ocultar</Button>
         </div>
       </Card>

@@ -3,7 +3,7 @@ import React from 'react';
 import datos from '../requests/adopcion';
 //import columnas from '../requests/info';
 
-import {Table} from 'antd';
+import {Table, Button} from 'antd';
 
 
 export default class Lista extends React.Component{
@@ -12,8 +12,7 @@ export default class Lista extends React.Component{
 constructor(props){
   super(props);
   this.state = {
-      adopcion: [],
-      info:[]
+      adopcion: []
     };
 }
 
@@ -27,7 +26,7 @@ render(){
             title:'Foto',
             dataIndex:'foto',
             render: (tag,registro) =>(
-              <img src={registro.foto}/>
+              <img src={registro.foto} width="75" height="75"/>
             )
           },
           {
@@ -42,7 +41,8 @@ render(){
             title:'Sexo',
             dataIndex:'sexo',
           },
-        ]} dataSource={datos.adopcion} size="small" />
+          
+        ]} dataSource={datos.adopcion} size="small" bordered="true"/>
       </div>
   </div>
     );
